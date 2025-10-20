@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 Lời chúc 20/10 - Gửi chị Ngọc</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- html2canvas for image capture -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffe6f1 0%, #ffc4de 50%, #ff7fbf 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            transition: all 2s ease-in-out;
+        }
+
+        body.final-view {
+            background: url('love-letter/123.jpg') center center/cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        body.final-view::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(1px);
+            z-index: 1;
+        }
+
+        /* 3D Hearts Animation */
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            perspective: 1000px;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 127, 191, 0.8);
+            font-size: 20px;
+            animation: fall3D linear infinite;
+            pointer-events: none;
+            transform-style: preserve-3d;
+        }
+
+        .heart-3d {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ff7fbf, #ff9ec7);
+            transform-style: preserve-3d;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: orbit3D 8s linear infinite, heartPulse 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(255, 127, 191, 0.5);
+        }
+
+        .heart-3d::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ff7fbf, #ff9ec7);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            transform: rotate(45deg);
+            top: -15px;
+            left: 0;
+        }
+
+        .heart-3d::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ff7fbf, #ff9ec7);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            transform: rotate(-45deg);
+            top: -15px;
+            right: 0;
+        }
+
+        @keyframes fall3D {
+            0% {
+                transform: translateY(-100vh) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes orbit3D {
+            0% {
+                transform: rotateY(0deg) translateZ(200px) rotateX(0deg);
+            }
+            100% {
+                transform: rotateY(360deg) translateZ(200px) rotateX(360deg);
+            }
+        }
+
+        @keyframes heartPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* 3D Flowers Animation */
+        .flowers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            perspective: 1000px;
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 24px;
+            animation: flowerFloat 6s ease-in-out infinite;
+            pointer-events: none;
+            transform-style: preserve-3d;
+        }
+
+        .flower-3d {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: radial-gradient(circle, #ffb3d1, #ff7fbf);
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            animation: flowerOrbit 10s linear infinite, flowerRotate 3s linear infinite;
+            box-shadow: 0 0 15px rgba(255, 127, 191, 0.4);
+        }
+
+        .flower-3d::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ff9ec7;
+            border-radius: 50%;
+            top: -4px;
+            left: 8px;
+            transform: rotate(45deg);
+        }
+
+        .flower-3d::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ff9ec7;
+            border-radius: 50%;
+            top: -4px;
+            right: 8px;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes flowerFloat {
+            0%, 100% {
+                transform: translateY(0) rotateX(0deg) rotateY(0deg);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-20px) rotateX(180deg) rotateY(180deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flowerOrbit {
+            0% {
+                transform: rotateY(0deg) translateZ(150px) rotateX(0deg);
+            }
+            100% {
+                transform: rotateY(360deg) translateZ(150px) rotateX(360deg);
+            }
+        }
+
+        @keyframes flowerRotate {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        /* Floating Hearts around letter */
+        .floating-hearts {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .floating-heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #ff7fbf, #ff9ec7);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: floatAround 4s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(255, 127, 191, 0.6);
+        }
+
+        .floating-heart:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .floating-heart:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 0.5s;
+        }
+
+        .floating-heart:nth-child(3) {
+            bottom: 25%;
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .floating-heart:nth-child(4) {
+            bottom: 15%;
+            right: 20%;
+            animation-delay: 1.5s;
+        }
+
+        .floating-heart:nth-child(5) {
+            top: 50%;
+            left: 5%;
+            animation-delay: 2s;
+        }
+
+        .floating-heart:nth-child(6) {
+            top: 50%;
+            right: 5%;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes floatAround {
+            0%, 100% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 0.7;
+            }
+            25% {
+                transform: translateY(-15px) scale(1.1) rotate(90deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10px) scale(0.9) rotate(180deg);
+                opacity: 0.8;
+            }
+            75% {
+                transform: translateY(-20px) scale(1.05) rotate(270deg);
+                opacity: 0.9;
+            }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff7fbf;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #d63384;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+
+
+        /* Envelope */
+        .envelope-container {
+            perspective: 1000px;
+            margin: 20px 0;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .envelope-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
+            background: transparent;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: auto;
+        }
+
+        .envelope {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .envelope:hover {
+            transform: scale(1.05) rotateY(5deg) rotateX(5deg);
+        }
+
+        .envelope-body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff7fbf 0%, #ff9ec7 100%);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff9ec7 0%, #ffb3d1 100%);
+            border-radius: 10px;
+            transform-origin: top;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .envelope-flap.opened {
+            transform: rotateX(-160deg);
+        }
+
+        .envelope-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            z-index: 5;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .recipient-name {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            z-index: 5;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .sender-name {
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 5;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            opacity: 0.9;
+        }
+
+        /* Letter */
+        .letter {
+            position: absolute;
+            top: -80px;
+            left: -80px;
+            width: calc(100% + 160px);
+            height: calc(100% + 160px);
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            opacity: 0;
+            transform: translateY(30px) scale(0.8) rotateX(15deg);
+            transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 1000;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.25), 
+                        0 0 50px rgba(255, 127, 191, 0.3);
+            border: 4px solid #ffc4de;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .letter.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1.28) rotateX(0deg) rotateY(0deg);
+            animation: letterGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes letterGlow {
+            0%, 100% {
+                box-shadow: 0 30px 60px rgba(0,0,0,0.25), 
+                           0 0 50px rgba(255, 127, 191, 0.3);
+            }
+            50% {
+                box-shadow: 0 30px 60px rgba(0,0,0,0.25), 
+                           0 0 80px rgba(255, 127, 191, 0.6);
+            }
+        }
+
+        .letter-content {
+            font-size: 1.5rem;
+            line-height: 2.2;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        .letter-stage {
+            display: none;
+            animation: stageFadeIn 0.8s ease-in-out;
+            position: relative;
+            z-index: 1004;
+        }
+
+        .letter-stage.active {
+            display: block;
+        }
+
+        .letter-stage.fade-out {
+            animation: stageFadeOut 0.5s ease-in-out forwards;
+        }
+
+        @keyframes stageFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes stageFadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+        }
+
+        .letter-line {
+            margin-bottom: 25px;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            font-size: 1.1em;
+        }
+
+        .stage-indicator {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: linear-gradient(135deg, #ff7fbf, #ff9ec7);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.5s ease;
+            z-index: 1003;
+        }
+
+        .stage-indicator.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+        /* Envelope closing animation */
+        .envelope-closing {
+            animation: envelopeClose 2s ease-in-out forwards;
+        }
+
+        @keyframes envelopeClose {
+            0% {
+                transform: scale(1.28) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.0) translateY(-20px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .letter-closing {
+            animation: letterClose 2s ease-in-out forwards;
+        }
+
+        @keyframes letterClose {
+            0% {
+                transform: translateY(0) scale(1.28);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(20px) scale(1.0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(30px) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: #ff7fbf;
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, #ff7fbf 0%, #ff9ec7 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .modal h3 {
+            color: #d63384;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal input, .modal textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ffc4de;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .modal input:focus, .modal textarea:focus {
+            outline: none;
+            border-color: #ff7fbf;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .modal-btn.primary {
+            background: #ff7fbf;
+            color: white;
+        }
+
+        .modal-btn.secondary {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .envelope {
+                width: 280px;
+                height: 190px;
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .envelope-overlay {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .envelope-body {
+                width: 100%;
+                height: 100%;
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .envelope-text {
+                font-size: 1.1rem;
+                padding: 10px;
+            }
+            
+            .recipient-name {
+                font-size: 0.9rem;
+                padding: 5px;
+            }
+            
+            .sender-name {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+            
+            .letter.visible {
+                transform: translateY(0) scale(1.0);
+            }
+            
+            .letter-content {
+                font-size: 1.2rem;
+            }
+            
+            .letter-line {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+            
+            .stage-indicator {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .action-btn {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 15px 25px;
+            }
+        }
+
+        /* Music visualizer */
+        .music-visualizer {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .music-visualizer:hover {
+            transform: scale(1.1);
+        }
+
+        .music-visualizer.playing {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Particle Effects */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 127, 191, 0.6);
+            border-radius: 50%;
+            animation: particleFloat 8s linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced 3D Effects */
+        .letter-content {
+            font-size: 1.5rem;
+            line-height: 2.2;
+            color: #333;
+            text-align: center;
+            position: relative;
+            transform-style: preserve-3d;
+            z-index: 1001;
+        }
+
+        .letter-line {
+            margin-bottom: 25px;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            font-size: 1.1em;
+            transform: translateZ(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1002;
+        }
+
+        .letter-line:hover {
+            transform: translateZ(20px) scale(1.02);
+            text-shadow: 2px 2px 8px rgba(255, 127, 191, 0.3);
+        }
+
+        /* Image Container for Stage 5 */
+        .letter-image-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1005;
+        }
+
+        .letter-image {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2), 
+                        0 0 20px rgba(255, 127, 191, 0.3);
+            transition: all 0.3s ease;
+            transform: translateZ(15px);
+            border: 3px solid #ffc4de;
+            margin-top: -35px;
+        }
+
+        .letter-image:hover {
+            transform: translateZ(25px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3), 
+                        0 0 30px rgba(255, 127, 191, 0.5);
+        }
+
+        .image-placeholder {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ffc4de, #ff9ec7);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 3px solid #ffb3d1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform: translateZ(15px);
+        }
+
+        .image-placeholder:hover {
+            transform: translateZ(25px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .image-upload-text {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #8b5a96;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Final View Styles */
+        .final-view .container {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 2s ease-in-out;
+        }
+
+        .final-view .hearts,
+        .final-view .flowers,
+        .final-view .particles,
+        .final-view .confetti {
+            opacity: 0;
+            transition: all 2s ease-in-out;
+        }
+
+
+        .final-view .music-visualizer {
+            opacity: 0;
+            transform: scale(0);
+            transition: all 2s ease-in-out;
+        }
+
+        .final-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1000;
+            opacity: 0;
+            transition: all 3s ease-in-out;
+        }
+
+        .final-message.visible {
+            opacity: 1;
+        }
+
+        .final-message h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .final-message p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .final-message .heart {
+            font-size: 3rem;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Envelope Open Button - NEW SIMPLE VERSION */
+        .envelope-open-btn {
+            position: fixed;
+            top: calc(50% + 140px);
+            right: 60px;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 50%, #ffa8c5 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 45px;
+            min-width: 160px;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .envelope-open-btn:hover {
+            transform: translateY(-50%) translateX(-5px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+        }
+
+        .envelope-open-btn:active {
+            transform: translateY(-50%) translateX(0) scale(1.02);
+        }
+
+        .envelope-open-btn .btn-icon {
+            font-size: 1.1rem;
+            animation: heartPulse 2s ease-in-out infinite;
+        }
+
+        .envelope-open-btn .btn-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        /* Simple clickable button - no complex pointer-events */
+
+        /* Mobile responsive for envelope open button */
+        @media (max-width: 768px) {
+            .envelope-open-btn {
+                right: -140px;
+                min-width: 140px;
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                z-index: 9999;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .envelope-open-btn {
+                right: 60px;
+                min-width: 30px;
+                padding: 8px 16px;
+                font-size: 0.8rem;
+                z-index: 9999;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 3D Hearts Animation -->
+    <div class="hearts" id="hearts"></div>
+    
+    <!-- 3D Flowers Animation -->
+    <div class="flowers" id="flowers"></div>
+    
+    <!-- Floating Hearts around letter -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- Particle Effects -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Confetti -->
+    <div class="confetti" id="confetti"></div>
+    
+    <!-- Music Visualizer -->
+    <div class="music-visualizer" id="musicVisualizer" onclick="toggleMusic()">
+        🎵
+    </div>
+    
+    
+    <!-- Main Container -->
+    <div class="container">
+        <div class="header">
+            <h1 class="title">💌 Lời chúc 20/10</h1>
+        </div>
+        
+        <div class="envelope-container">
+            <div class="envelope" onclick="openEnvelope()" ontouchstart="openEnvelope()">
+                <div class="envelope-body" onclick="openEnvelope()" ontouchstart="openEnvelope()">
+                    <div class="envelope-flap" id="envelopeFlap" onclick="openEnvelope()" ontouchstart="openEnvelope()"></div>
+                    <div class="recipient-name" id="recipientName" onclick="openEnvelope()" ontouchstart="openEnvelope()">💌 Gửi: Chị Ngọc</div>
+                    <div class="sender-name" id="senderName" onclick="openEnvelope()" ontouchstart="openEnvelope()">📝 From: Phan Nguyễn</div>
+                    <div class="envelope-text" onclick="openEnvelope()" ontouchstart="openEnvelope()"></div>
+                </div>
+                <!-- Invisible overlay for full area clicking -->
+                <div class="envelope-overlay" onclick="openEnvelope()" ontouchstart="openEnvelope()"></div>
+                
+                <!-- Open Letter Button -->
+                <div class="envelope-open-btn" id="envelopeOpenBtn" onclick="openEnvelope()" ontouchstart="openEnvelope()">
+                    <span class="btn-icon">💌</span>
+                    <span class="btn-text">Mở lời chúc</span>
+                </div>
+                <div class="letter" id="letter">
+                    <div class="stage-indicator" id="stageIndicator">Phần 1/5</div>
+                    <div class="letter-content" id="letterContent">
+                        <div class="letter-stage" id="stage1">
+                            <div class="letter-line">Gửi chị Ngọc thân thương 🌸</div>
+                        </div>
+                        <div class="letter-stage" id="stage2">
+                            <div class="letter-line">Chúc chị một ngày 20/10 thật rạng rỡ, xinh đẹp và tràn ngập niềm vui 💐</div>
+                        </div>
+                        <div class="letter-stage" id="stage3">
+                            <div class="letter-line">Chị luôn là hình ảnh của sự dịu dàng, tự tin và đầy cảm hứng ❤️</div>
+                        </div>
+                        <div class="letter-stage" id="stage4">
+                            <div class="letter-line">Chúc chị luôn khỏe mạnh, bình an và được yêu thương mỗi ngày 🌷</div>
+                        </div>
+                        <div class="letter-stage" id="stage5">
+                            <div class="letter-line">Chúc mừng Ngày Phụ nữ Việt Nam 20/10 — chúc chị luôn hạnh phúc, thành công và thật nhiều yêu thương 💞</div>
+                            <div class="letter-image-container">
+                                <div class="image-placeholder" onclick="uploadImage()" id="imagePlaceholder" style="display: none;">
+                                    📸
+                                </div>
+                                <div class="image-upload-text" id="imageUploadText" style="display: none;">Click để thêm ảnh</div>
+                                <img class="letter-image" id="letterImage" src="love-letter/123.jpg" alt="Hình ảnh tình yêu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons" id="actionButtons" style="display: none;">
+            <button class="action-btn" onclick="replayLetter()">🔄 Phát lại lời chúc</button>
+            <button class="action-btn" onclick="editLetter()">✏️ Sửa lời chúc</button>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h3>✏️ Sửa lời chúc</h3>
+            <textarea id="letterEdit" rows="8" placeholder="Nhập lời chúc..."></textarea>
+            <div class="modal-buttons">
+                <button class="modal-btn primary" onclick="saveLetter()">Lưu</button>
+                <button class="modal-btn secondary" onclick="closeEditModal()">Hủy</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden file input for image upload -->
+    <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+    
+    <!-- Final Message -->
+    <div class="final-message" id="finalMessage">
+        <h1>Chị Ngọc</h1>
+        <p>Chúc chị 20/10 thật nhiều niềm vui và hạnh phúc!</p>
+        <div class="heart">💕</div>
+    </div>
+    
+    <!-- Audio -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_b1f8e2a9b7.mp3?filename=romantic-piano-7851.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Global variables
+        let isEnvelopeOpen = false;
+        let isMusicPlaying = false;
+        let music = document.getElementById('backgroundMusic');
+        let musicBtn = document.getElementById('musicBtn');
+        let musicVisualizer = document.getElementById('musicVisualizer');
+        
+        // Default letter content - divided into 5 stages
+        const defaultLetterStages = [
+    [
+        "Gửi chị Ngọc thân yêu 🌸"
+    ],
+    [
+        "Chúc chị 20/10 luôn xinh đẹp, rạng rỡ và thật bình an 💐"
+    ],
+    [
+        "Cảm ơn chị vì luôn dịu dàng, mạnh mẽ và truyền cảm hứng ❤️"
+    ],
+    [
+        "Mong mọi điều tốt đẹp nhất luôn ở bên chị hôm nay và mỗi ngày 🌷"
+    ],
+    [
+        "Chúc mừng Ngày Phụ nữ Việt Nam 20/10 — chúc chị thật nhiều niềm vui, bình an và hạnh phúc 💞"
+    ]
+];
+
+        
+        let currentLetterStages = JSON.parse(JSON.stringify(defaultLetterStages));
+        let currentStage = 0;
+        let totalStages = currentLetterStages.length;
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            createHearts();
+            createFlowers();
+            createFloatingHearts();
+            createParticles();
+            loadSavedImage();
+            setupMobileTouch();
+            setupEnvelopeButton();
+            setInterval(createHearts, 2000);
+            setInterval(createFlowers, 3000);
+            setInterval(createParticles, 1000);
+        });
+        
+        function initializeApp() {
+            // Set default recipient name
+            const savedName = localStorage.getItem('recipientName');
+            const newRecipient = 'Chị Ngọc';
+            if (!savedName) {
+                localStorage.setItem('recipientName', newRecipient);
+                updateRecipientName(newRecipient);
+            } else {
+                // Always update to new name to override old cached names
+                localStorage.setItem('recipientName', newRecipient);
+                updateRecipientName(newRecipient);
+            }
+            
+            // Load saved letter content
+            const savedLetter = localStorage.getItem('letterStages');
+            if (savedLetter) {
+                currentLetterStages = JSON.parse(savedLetter);
+                totalStages = currentLetterStages.length;
+                updateLetterContent();
+            }
+        }
+        
+        
+        function updateRecipientName(name) {
+            document.getElementById('recipientName').textContent = `💌 Gửi: ${name}`;
+        }
+        
+        function updateSenderName(name) {
+            document.getElementById('senderName').textContent = `📝 From: ${name}`;
+        }
+        
+        
+        function openEnvelope() {
+            if (isEnvelopeOpen) return;
+            
+            isEnvelopeOpen = true;
+            const flap = document.getElementById('envelopeFlap');
+            const letter = document.getElementById('letter');
+            const actionButtons = document.getElementById('actionButtons');
+            const envelopeOpenBtn = document.querySelector('.envelope-open-btn');
+            
+            // Hide the envelope open button
+            if (envelopeOpenBtn) {
+                envelopeOpenBtn.style.display = 'none';
+            }
+            
+            // Open envelope
+            flap.classList.add('opened');
+            
+            // Show letter after delay
+            setTimeout(() => {
+                letter.classList.add('visible');
+                actionButtons.style.display = 'flex';
+                showStageIndicator();
+                startLetterStages();
+                createConfetti();
+                
+                // Auto play music on first open
+                if (!isMusicPlaying) {
+                    toggleMusic();
+                }
+            }, 800);
+        }
+        
+        function showStageIndicator() {
+            const indicator = document.getElementById('stageIndicator');
+            indicator.textContent = `Phần${currentStage + 1}/${totalStages}`;
+            indicator.classList.add('visible');
+        }
+        
+        function startLetterStages() {
+            currentStage = 0;
+            showCurrentStage();
+        }
+        
+        function showCurrentStage() {
+            // Hide all stages
+            const stages = document.querySelectorAll('.letter-stage');
+            stages.forEach(stage => {
+                stage.classList.remove('active');
+            });
+            
+            // Show current stage
+            const currentStageElement = document.getElementById(`stage${currentStage + 1}`);
+            if (currentStageElement) {
+                currentStageElement.classList.add('active');
+            }
+            
+            // Update indicator
+            const indicator = document.getElementById('stageIndicator');
+            indicator.textContent = `Phần${currentStage + 1}/${totalStages}`;
+            
+            // Auto advance to next stage after 2.5 seconds
+            setTimeout(() => {
+                if (currentStage < totalStages - 1) {
+                    fadeOutCurrentStage();
+                } else {
+                    // Last stage - start final view transition after 3 seconds
+                    setTimeout(() => {
+                        startFinalViewTransition();
+                    }, 3000);
+                }
+            }, 2500);
+        }
+        
+        function fadeOutCurrentStage() {
+            const currentStageElement = document.getElementById(`stage${currentStage + 1}`);
+            if (currentStageElement) {
+                currentStageElement.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    currentStageElement.classList.remove('active', 'fade-out');
+                    currentStage++;
+                    if (currentStage < totalStages) {
+                        showCurrentStage();
+                    }
+                }, 500);
+            }
+        }
+        
+        function startFinalViewTransition() {
+            // Start closing animations
+            const letter = document.getElementById('letter');
+            const envelope = document.querySelector('.envelope');
+            const flap = document.getElementById('envelopeFlap');
+            const actionButtons = document.getElementById('actionButtons');
+            
+            // Hide action buttons
+            actionButtons.style.display = 'none';
+            
+            // Start letter closing animation
+            letter.classList.add('letter-closing');
+            
+            // Start envelope closing animation after letter starts closing
+            setTimeout(() => {
+                envelope.classList.add('envelope-closing');
+                flap.classList.remove('opened');
+            }, 1000);
+            
+            // Start final view transition after letter closes
+            setTimeout(() => {
+                showFinalView();
+            }, 2000);
+        }
+
+        function showFinalView() {
+            // Add final view class to body
+            document.body.classList.add('final-view');
+            
+            // Show final message after background transition
+            setTimeout(() => {
+                const finalMessage = document.getElementById('finalMessage');
+                finalMessage.classList.add('visible');
+            }, 2000);
+        }
+        
+        
+        function resetEnvelope() {
+            const letter = document.getElementById('letter');
+            const envelope = document.querySelector('.envelope');
+            const flap = document.getElementById('envelopeFlap');
+            const actionButtons = document.getElementById('actionButtons');
+            const envelopeOpenBtn = document.querySelector('.envelope-open-btn');
+            
+            // Reset all classes
+            letter.classList.remove('visible', 'letter-closing');
+            envelope.classList.remove('envelope-closing');
+            flap.classList.remove('opened');
+            
+            // Hide action buttons
+            actionButtons.style.display = 'none';
+            
+            // Show the envelope open button
+            if (envelopeOpenBtn) {
+                envelopeOpenBtn.style.display = 'flex';
+            }
+            
+            // Reset stage
+            currentStage = 0;
+            isEnvelopeOpen = false;
+            
+            // Hide stage indicator
+            const indicator = document.getElementById('stageIndicator');
+            indicator.classList.remove('visible');
+            
+            // Hide all stages
+            const stages = document.querySelectorAll('.letter-stage');
+            stages.forEach(stage => {
+                stage.classList.remove('active', 'fade-out');
+            });
+        }
+        
+        function replayLetter() {
+            currentStage = 0;
+            const stages = document.querySelectorAll('.letter-stage');
+            stages.forEach(stage => {
+                stage.classList.remove('active', 'fade-out');
+            });
+            
+            setTimeout(() => {
+                showStageIndicator();
+                startLetterStages();
+            }, 100);
+        }
+        
+        function editLetter() {
+            // Convert stages back to single text for editing
+            const allLines = currentLetterStages.flat();
+            document.getElementById('letterEdit').value = allLines.join('\n');
+            document.getElementById('editModal').style.display = 'block';
+        }
+        
+        function saveLetter() {
+            const newContent = document.getElementById('letterEdit').value.trim();
+            if (newContent) {
+                const lines = newContent.split('\n').filter(line => line.trim());
+                
+                // Divide lines into 5 stages with balanced distribution
+                const newStages = [];
+                const linesPerStage = Math.ceil(lines.length / 5);
+                
+                for (let i = 0; i < lines.length; i += linesPerStage) {
+                    newStages.push(lines.slice(i, i + linesPerStage));
+                }
+                
+                // Ensure we have exactly 5 stages
+                while (newStages.length < 5) {
+                    newStages.push([]);
+                }
+                if (newStages.length > 5) {
+                    // Merge last stages if we have more than 5
+                    const lastStage = newStages.pop();
+                    newStages[newStages.length - 1].push(...lastStage);
+                }
+                
+                currentLetterStages = newStages;
+                totalStages = 5;
+                localStorage.setItem('letterStages', JSON.stringify(currentLetterStages));
+                updateLetterContent();
+                closeEditModal();
+                replayLetter();
+            }
+        }
+        
+        function updateLetterContent() {
+            const letterContent = document.getElementById('letterContent');
+            let html = '';
+            
+            // Always create exactly 5 stages
+            for (let i = 0; i < 5; i++) {
+                html += `<div class="letter-stage" id="stage${i + 1}">`;
+                if (currentLetterStages[i]) {
+                    currentLetterStages[i].forEach(line => {
+                        html += `<div class="letter-line">${line}</div>`;
+                    });
+                }
+                html += '</div>';
+            }
+            
+            letterContent.innerHTML = html;
+        }
+        
+        function closeEditModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+        
+        function toggleMusic() {
+            if (isMusicPlaying) {
+                music.pause();
+                musicBtn.textContent = '🎵 Bật nhạc';
+                musicVisualizer.textContent = '🎵';
+                musicVisualizer.classList.remove('playing');
+            } else {
+                music.play().catch(e => console.log('Auto-play prevented'));
+                musicBtn.textContent = '🔇 Tắt nhạc';
+                musicVisualizer.textContent = '🔇';
+                musicVisualizer.classList.add('playing');
+            }
+            isMusicPlaying = !isMusicPlaying;
+        }
+        
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            
+            // Create emoji hearts
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💖';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            heart.style.fontSize = (Math.random() * 10 + 15) + 'px';
+            heartsContainer.appendChild(heart);
+            
+            // Create 3D hearts
+            const heart3D = document.createElement('div');
+            heart3D.className = 'heart-3d';
+            heart3D.style.left = Math.random() * 100 + '%';
+            heart3D.style.top = Math.random() * 100 + '%';
+            heart3D.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            heartsContainer.appendChild(heart3D);
+            
+            // Remove hearts after animation
+            setTimeout(() => {
+                heart.remove();
+                heart3D.remove();
+            }, 8000);
+        }
+
+        function createFlowers() {
+            const flowersContainer = document.getElementById('flowers');
+            
+            // Create emoji flowers
+            const flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.innerHTML = '🌸';
+            flower.style.left = Math.random() * 100 + '%';
+            flower.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            flower.style.fontSize = (Math.random() * 8 + 16) + 'px';
+            flowersContainer.appendChild(flower);
+            
+            // Create 3D flowers
+            const flower3D = document.createElement('div');
+            flower3D.className = 'flower-3d';
+            flower3D.style.left = Math.random() * 100 + '%';
+            flower3D.style.top = Math.random() * 100 + '%';
+            flower3D.style.animationDuration = (Math.random() * 3 + 7) + 's';
+            flowersContainer.appendChild(flower3D);
+            
+            // Remove flowers after animation
+            setTimeout(() => {
+                flower.remove();
+                flower3D.remove();
+            }, 10000);
+        }
+
+        function createFloatingHearts() {
+            const floatingHeartsContainer = document.getElementById('floatingHearts');
+            
+            // Create 6 floating hearts around the letter
+            for (let i = 0; i < 6; i++) {
+                const floatingHeart = document.createElement('div');
+                floatingHeart.className = 'floating-heart';
+                floatingHeart.style.animationDelay = (i * 0.5) + 's';
+                floatingHeartsContainer.appendChild(floatingHeart);
+            }
+        }
+
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            
+            // Create multiple particles
+            for (let i = 0; i < 3; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                particle.style.width = (Math.random() * 3 + 2) + 'px';
+                particle.style.height = particle.style.width;
+                particlesContainer.appendChild(particle);
+                
+                // Remove particle after animation
+                setTimeout(() => {
+                    particle.remove();
+                }, 8000);
+            }
+        }
+        
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            const colors = ['#ff7fbf', '#ff9ec7', '#ffb3d1', '#ffc4de'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti-piece';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confettiContainer.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+        
+        
+        
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const editModal = document.getElementById('editModal');
+            
+            if (event.target === editModal) {
+                editModal.style.display = 'none';
+            }
+        }
+        
+        // Handle Enter key in letter edit
+        document.getElementById('letterEdit').addEventListener('keypress', function(e) {
+            if (e.ctrlKey && e.key === 'Enter') {
+                saveLetter();
+            }
+        });
+
+        // Image upload functions
+        function uploadImage() {
+            document.getElementById('imageInput').click();
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageUrl = e.target.result;
+                    displayImage(imageUrl);
+                    // Save to localStorage
+                    localStorage.setItem('letterImage', imageUrl);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function displayImage(imageUrl) {
+            const placeholder = document.getElementById('imagePlaceholder');
+            const image = document.getElementById('letterImage');
+            const uploadText = document.getElementById('imageUploadText');
+            
+            // Hide placeholder and show image
+            placeholder.style.display = 'none';
+            uploadText.style.display = 'none';
+            image.src = imageUrl;
+            image.style.display = 'block';
+        }
+
+        function loadSavedImage() {
+            const savedImage = localStorage.getItem('letterImage');
+            if (savedImage) {
+                displayImage(savedImage);
+            } else {
+                // Show default image if no saved image
+                const placeholder = document.getElementById('imagePlaceholder');
+                const uploadText = document.getElementById('imageUploadText');
+                const image = document.getElementById('letterImage');
+                
+                // Check if image loads successfully
+                image.onload = function() {
+                    placeholder.style.display = 'none';
+                    uploadText.style.display = 'none';
+                    image.style.display = 'block';
+                };
+                
+                image.onerror = function() {
+                    // If image fails to load, show placeholder
+                    placeholder.style.display = 'flex';
+                    uploadText.style.display = 'block';
+                    image.style.display = 'none';
+                    console.log('Failed to load default image: love-letter/123.jpg');
+                };
+            }
+        }
+
+        function setupEnvelopeButton() {
+            // Button now uses simple onclick attribute - no complex setup needed
+            console.log('Button setup complete - USING SIMPLE ONCLICK');
+            
+            // Test function
+            window.testButton = function() {
+                console.log('Testing button...');
+                const btn = document.getElementById('envelopeOpenBtn');
+                if (btn) {
+                    console.log('Button found:', btn);
+                    btn.click();
+                }
+            };
+        }
+
+        function setupMobileTouch() {
+            const envelope = document.querySelector('.envelope');
+            const envelopeBody = document.querySelector('.envelope-body');
+            const envelopeFlap = document.querySelector('.envelope-flap');
+            const envelopeText = document.querySelector('.envelope-text');
+            const recipientName = document.querySelector('.recipient-name');
+            const envelopeOverlay = document.querySelector('.envelope-overlay');
+            const envelopeOpenBtn = document.getElementById('envelopeOpenBtn');
+            let touchStarted = false;
+            
+            // Debug function to check if events are working
+            function debugEvent(eventType) {
+                console.log(`Envelope ${eventType} event triggered`);
+            }
+            
+            // Function to add event listeners to an element
+            function addEnvelopeEvents(element) {
+                // Simple click event that works everywhere
+                element.addEventListener('click', function(e) {
+                    debugEvent('click on ' + element.className);
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (!isEnvelopeOpen) {
+                        debugEvent('opening envelope via click');
+                        openEnvelope();
+                    }
+                });
+                
+                // Touch events for mobile
+                element.addEventListener('touchstart', function(e) {
+                    debugEvent('touchstart on ' + element.className);
+                    touchStarted = true;
+                    envelope.style.transform = 'scale(1.05) rotateY(5deg) rotateX(5deg)';
+                }, { passive: true });
+                
+                element.addEventListener('touchend', function(e) {
+                    debugEvent('touchend on ' + element.className);
+                    if (touchStarted) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        envelope.style.transform = 'scale(1) rotateY(0deg) rotateX(0deg)';
+                        if (!isEnvelopeOpen) {
+                            debugEvent('opening envelope via touch');
+                            openEnvelope();
+                        }
+                    }
+                    touchStarted = false;
+                }, { passive: false });
+                
+                element.addEventListener('touchcancel', function(e) {
+                    debugEvent('touchcancel on ' + element.className);
+                    touchStarted = false;
+                    envelope.style.transform = 'scale(1) rotateY(0deg) rotateX(0deg)';
+                }, { passive: true });
+                
+                // Mouse events for desktop and DevTools
+                element.addEventListener('mousedown', function(e) {
+                    debugEvent('mousedown on ' + element.className);
+                    envelope.style.transform = 'scale(1.05) rotateY(5deg) rotateX(5deg)';
+                });
+                
+                element.addEventListener('mouseup', function(e) {
+                    debugEvent('mouseup on ' + element.className);
+                    envelope.style.transform = 'scale(1) rotateY(0deg) rotateX(0deg)';
+                    if (!isEnvelopeOpen) {
+                        debugEvent('opening envelope via mouse');
+                        openEnvelope();
+                    }
+                });
+                
+                element.addEventListener('mouseleave', function(e) {
+                    debugEvent('mouseleave on ' + element.className);
+                    envelope.style.transform = 'scale(1) rotateY(0deg) rotateX(0deg)';
+                });
+            }
+            
+            // Add event listeners to all envelope components
+            addEnvelopeEvents(envelope);
+            addEnvelopeEvents(envelopeBody);
+            addEnvelopeEvents(envelopeFlap);
+            addEnvelopeEvents(envelopeText);
+            addEnvelopeEvents(recipientName);
+            addEnvelopeEvents(envelopeOverlay);
+            
+            // Button is now handled separately in setupEnvelopeButton()
+            
+            // Additional simple click handler for DevTools compatibility
+            envelope.addEventListener('click', function(e) {
+                console.log('Direct envelope click - DevTools mode');
+                if (!isEnvelopeOpen) {
+                    console.log('Opening envelope directly');
+                    openEnvelope();
+                }
+            }, true); // Use capture phase
+            
+            // Special handler for overlay to ensure it works everywhere
+            if (envelopeOverlay) {
+                envelopeOverlay.addEventListener('click', function(e) {
+                    console.log('Overlay clicked - full area');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (!isEnvelopeOpen) {
+                        console.log('Opening envelope via overlay');
+                        openEnvelope();
+                    }
+                });
+                
+                envelopeOverlay.addEventListener('touchstart', function(e) {
+                    console.log('Overlay touchstart - full area');
+                    e.preventDefault();
+                    if (!isEnvelopeOpen) {
+                        console.log('Opening envelope via overlay touch');
+                        openEnvelope();
+                    }
+                }, { passive: false });
+            }
+        }
+
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
